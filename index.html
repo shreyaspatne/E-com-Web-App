@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>E-com</title>
+</head>
+
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10 col-11 mx-auto">
+                <div class="row mt-5 mb-5 gx-3">
+                    <!-- left side dive -->
+                    <div class="col-md-12 col-lg-8 col-11 mx-auto main_cart mb-lg-0 mb-5 shadow">
+                        <div class="card p-4">
+                            <h2 class="py-4 font-weight-bold">Cart (2 items)</h2>
+                            <div class="row">
+                                <!-- cart image div -->
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-item-center shadow product_img">
+                                    <img src="img1.jpg" class="img-fluid" alt="cart img">
+                                </div>
+
+                                <!-- cart product details -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name -->
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">CB Headphone</h1>
+                                            <p class="mb-2">MODEL: GS410</p>
+                                            <p class="mb-2">COLOR: BLUE</p>
+                                            <p class="mb-3">WEIGHT: 400G</p>
+                                        </div>
+
+                                        <!-- quantity selection -->
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set-quantity">
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="decrnum('textbox','itemval')">-</button>
+                                                </li>
+
+                                                <li class="page-item">
+                                                    <input type="text" name="" class="page-link" value="0" id="textbox"></input>
+                                                </li>
+
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="incrnum('textbox','itemval')">+</button>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove and prise -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p>remove item</p>
+                                            <p>move to wish list</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price-money">
+                                            <h3>$<span id="itemval">0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <!-- second card -->
+                        <div class="card p-4">
+                            
+                            <div class="row">
+                                <!-- cart image div -->
+                                <div
+                                    class="col-md-5 col-11 mx-auto bg-light d-flex justify-content-center align-item-center shadow product_img">
+                                    <img src="img2.jpg" class="img-fluid" alt="cart img">
+                                </div>
+
+                                <!-- cart product details -->
+                                <div class="col-md-7 col-11 mx-auto px-4 mt-2">
+                                    <div class="row">
+                                        <!-- product name -->
+                                        <div class="col-6 card-title">
+                                            <h1 class="mb-4 product_name">JBL C100SI In-Ear</h1>
+                                            <p class="mb-2">MODEL: JBLC100SIUBLK</p>
+                                            <p class="mb-2">COLOR: BLACK</p>
+                                            <p class="mb-3">IMPEDANCE: 16 Ohm</p>
+                                        </div>
+
+                                        <!-- quantity selection -->
+                                        <div class="col-6">
+                                            <ul class="pagination justify-content-end set-quantity">
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="decrnum('textbox1','itemval1')">-</button>
+                                                </li>
+
+                                                <li class="page-item">
+                                                    <input type="text" name="" class="page-link" value="0"
+                                                        id="textbox1"></input>
+                                                </li>
+
+                                                <li class="page-item">
+                                                    <button class="page-link" onclick="incrnum('textbox1','itemval1')">+</button>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- remove and prise -->
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-between remove_wish">
+                                            <p>remove item</p>
+                                            <p>move to wish list</p>
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end price-money">
+                                            <h3>$<span id="itemval1">0.00</span></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right side div -->
+                    <div class="col-md-12 col-lg-4 col-11 mx-auto mt-lg-0 mt-md-5">
+                        <div class="right_side p-3 shadow bg-white">
+                            <h2 class="product_name mb-5">The Total Amount of</h2>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>product amount</p>
+                                <p>$<span id="product_total">0</span></p>
+                            </div>
+                            <div class="price_indiv d-flex justify-content-between">
+                                <p>Shiping Charges</p>
+                                <p>$ <span id="ship_charge">0</span></p>
+                                
+                            </div>
+                            <p><small id="freedil"></small></p>
+                            <hr>
+                            <div class="total-amt d-flex justify-content-between font-weight-bold visibal" id="dismsg">
+                                <p> your Discount is </p>
+                                <p>$<span id="dismsg_val"></span></p>
+                            </div>
+                            <div class="total-amt d-flex justify-content-between font-weight-bold">
+                                <p>The Total amount of (including vat)</p>
+                                <p>$<span id="total_cart_amt">0.00</span></p>
+                            </div>
+                            
+                            <button class="btn btn-primary text-uppercase">Check out</button>
+                        </div>
+                        <!-- discount code part -->
+                        <div class="discount_code mt-3 shadow visibal" id="dissbox">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a class="d-flex justify-content-between" data-toggle="collapse"
+                                        href="#collapseExample" aria-expanded="false" aria-controls="#collapseExample">
+                                        Add a discount code (optioinal)
+                                        <span><i class="fas fa-chevron-down pt-1"></i></span>
+                                    </a>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="mt-3">
+                                            <input type="text" name="" id="discount_code1"
+                                                class="form-control font-weight-bold"
+                                                placeholder="Enter the discount code">
+                                            <small id="error-trw" class="text-dark mt-3">write the discount code (code is "shreyas")
+
+                                            </small>
+                                        </div>
+                                        <button class="btn btn-primary btn-sm mt-3"
+                                            onclick="discount_code()">Apply</button>
+                                            <span class="ml-2"id="removebtn"></span>
+                                        <!-- <button class="btn btn-primary btn-sm mt-3"
+                                            onclick="discount_code()">Remove</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- discount code end -->
+                        <div class="mt-3 shadow p-3 bg-white">
+                            <div class="pt-4">
+                                <h5 class="mb-4">Expected delivery Date</h5>
+                                <p>September 25th 2020-September 30th 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="logic.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
